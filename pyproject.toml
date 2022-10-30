@@ -60,7 +60,7 @@ dynamic = ["version"]
 readme = "README.md"
 requires-python = ">= 3.10"
 authors = [{ name = "Derek Wan", email = "d.wan@icloud.com" }]
-dependencies = []
+dependencies = ["loguru >= 0.6.0", "prefect >= 2.6.5"]
 
 [project.optional-dependencies]
 dev = [
