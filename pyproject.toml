@@ -11,6 +11,7 @@ data_file = ".coverage/data"
 parallel = true
 
 [tool.coverage.report]
+exclude_lines = ["# pragma: no cover", "@overload"]
 fail_under = 100.0
 skip_covered = true
 skip_empty = true
@@ -27,10 +28,10 @@ build-backend = "hatchling.build"
 sources = ["src"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/dycw_template"]
+packages = ["src/learning_prefect"]
 
 [tool.hatch.version]
-path = "src/dycw_template/__init__.py"
+path = "src/learning_prefect/__init__.py"
 
 #### isort ####################################################################
 [tool.isort]
@@ -54,7 +55,7 @@ style = [
 
 #### project ##################################################################
 [project]
-name = "dycw-template"
+name = "learning-prefect"
 dynamic = ["version"]
 readme = "README.md"
 requires-python = ">= 3.10"
@@ -113,7 +114,7 @@ reportUnusedCallResult = "error"
 addopts = [
   "-rsxX",
   "--color=auto",
-  "--cov=dycw_template",
+  "--cov=learning_prefect",
   "--cov-config=pyproject.toml",
   "--cov-report=html",
   "--strict-markers",
